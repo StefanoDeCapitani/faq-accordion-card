@@ -100,12 +100,16 @@ img.arrow-icon {
   height: 10px;
 }
 
-p.question:hover {
+div.question, div.answer{
+  margin: 14px 0;
+}
+
+div.question:hover {
   color: var(--soft-red);
   cursor: pointer;
 }
 
-p.answer {
+div.answer {
   width: 45ch;
   display: none;
 }
@@ -115,11 +119,11 @@ input.radio {
   opacity: 0;
 }
 
-input.radio:checked~p.question {
+input.radio:checked~div.question {
   font-weight: 700;
 }
 
-input.radio:checked~p.question:hover {
+input.radio:checked~div.question:hover {
   color: black;
   cursor: default;
 }
@@ -128,7 +132,7 @@ input.radio:checked~img.arrow-icon {
   transform: scaleY(-1);
 }
 
-input.radio:checked~p.answer {
+input.radio:checked~div.answer {
   display: inline-block;
 }
 
@@ -181,7 +185,7 @@ div.attribution {
     top: 14px;
   }
 
-  p.answer {
+  div.answer {
     width: 35ch;
   }
 
